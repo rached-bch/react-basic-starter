@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+function CoolComponent({ message1, message2 }) {
+  const message3 = `Message concaténé : ${message1} et ${message2}`;
+  return (
+    <p>
+      <span>{message1}</span>
+      <br />
+      <span>{message2}</span>
+      <br />
+      <span>Simulation de concaténation {message3}</span>
+    </p>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CoolComponent message1="Hello" message2="Bonjour" />
     </div>
   );
 }
-
 export default App;
