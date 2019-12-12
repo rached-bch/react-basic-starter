@@ -1,8 +1,10 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-function CoolComponent({ message1, message2 }) {
+function CoolComponent(props) {
+  console.log(props);
+  const message1 = props.message1;
+  const message2 = props.message2;
   const message3 = `Message concaténé : ${message1} et ${message2}`;
   return (
     <p>
