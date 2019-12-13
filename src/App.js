@@ -6,6 +6,7 @@ import GuessCount from "./GuessCount";
 import Columns from "./Columns";
 import Section from "./Section";
 import Users from "./Users";
+import Form from "./Form";
 
 class App extends Component {
   users = ["Rached", "Mike", "Rob"];
@@ -20,6 +21,7 @@ class App extends Component {
     let won = new Date().getSeconds() % 2 === 0;
     return (
       <div>
+        <Form></Form>
         {won && (
           <Columns
             left={ColumnLeft}

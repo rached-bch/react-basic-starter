@@ -9,12 +9,11 @@ export default class Section extends Component {
   static propTypes = {
     text: PropTypes.string.isRequired
   };
-
   constructor(props) {
     super(props);
     this.textInput = props.text;
   }
   render() {
-    return <div>{this.textInput}</div>;
+    return <div className="section">{this.textInput}</div>;
   }
 }
