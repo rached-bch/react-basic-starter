@@ -7,6 +7,7 @@ export default class Form extends Component {
   };
   constructor(props) {
     super(props);
+    this.textInput = "";
   }
 
   logIn(event) {
@@ -14,13 +15,17 @@ export default class Form extends Component {
     console.log("LOGIN", this);
   }
   handleChangeValueImposePair = ({ target: { value } }) => {
-    console.log("check value executed", value);
+    console.log("check value executed", this.textInput);
     value = value
       // Remove all non-digits, turn initial 33 into nothing
       .replace(/\D+/, "");
     if (value == "") value = 0;
     else if (value % 2 != 0) value = 0;
     this.setState({ inputValue: value });
+  };
+
+  champSimpleControle = ({ target: { value } }) => {
+    console.log("champ controlé", value);
   };
   render() {
     const { inputValue } = this.state;
@@ -32,6 +37,12 @@ export default class Form extends Component {
             type="number"
             value={inputValue}
             onChange={this.handleChangeValueImposePair}
+          />
+          <input
+            type="text"
+            defaultValue="Salut"
+            ref={this.textInput}
+            onChange={this.champSimpleControle}
           />
         </p>
         <p>
