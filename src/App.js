@@ -5,8 +5,11 @@ import Greeter from "./Greeter";
 import GuessCount from "./GuessCount";
 import Columns from "./Columns";
 import Section from "./Section";
+import Users from "./Users";
 
 class App extends Component {
+  users = ["Rached", "Mike", "Rob"];
+
   handleClick(Card) {
     console.log("Card click");
   }
@@ -52,6 +55,7 @@ class App extends Component {
         <Card card="🎩" feedback="visible" onClick={this.handleClick} />
         <Card card="🐶" feedback="hidden" onClick={this.handleClick} />
         <Card card="🐱" feedback="justMatched" onClick={this.handleClick} />
+        <Users users={this.users}></Users>
       </div>
     );
   }
