@@ -13,7 +13,20 @@ export default class Section extends Component {
     super(props);
     this.textInput = props.text;
   }
+  // méthode incorrecte qui ne permet pas de faire le bind
+  // handleClickSection() {
+  //   console.log("Section click", this);
+  // }
+
+  // bind fct
+  handleClickSection = () => {
+    console.log("Section click", this);
+  };
   render() {
-    return <div className="section">{this.textInput}</div>;
+    return (
+      <div className="section" onClick={this.handleClickSection}>
+        {this.textInput}
+      </div>
+    );
   }
 }
