@@ -7,6 +7,7 @@ import Columns from "./Columns";
 import Section from "./Section";
 import Users from "./Users";
 import Form from "./Form";
+import TimeCounter from "./TimeCounter";
 
 class App extends Component {
   users = ["Rached", "Mike", "Rob"];
@@ -21,6 +22,7 @@ class App extends Component {
     let won = new Date().getSeconds() % 2 === 0;
     return (
       <div>
+        <TimeCounter></TimeCounter>
         <Form></Form>
         {won && (
           <Columns
