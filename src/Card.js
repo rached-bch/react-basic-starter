@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Component } from "react";
 
-import "./Card.css";
-
-const HIDDEN_SYMBOL = "❓";
-
-const Card = ({ card, feedback, onClick }) => {
-  const a = "Hello world";
-  return (
-    <div className="card" onClick={onClick(Card)}>
-      H
-    </div>
-  );
-};
-
-export default Card;
+export default class Card extends Component {
+  constructor(props) {
+    super(props);
+  }
+  handleCLick() {
+    console.log("Card click ");
+  }
+  render() {
+    const a = "Hello world";
+    return (
+      <div className="card" onClick={() => this.handleCLick()}>
+        H
+      </div>
+    );
+  }
+}

@@ -5,7 +5,11 @@ export default class Users extends Component {
     return (
       <div className="user-list">
         {this.props.users.map((name, index) => {
-          return <div className="user-item">{name}</div>;
+          return (
+            <div key={index} className="user-item">
+              {name}
+            </div>
+          );
         })}
       </div>
     );
