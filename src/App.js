@@ -4,6 +4,7 @@ import Card from "./Card";
 import GuessCount from "./GuessCount";
 
 function App() {
+  console.log("Hello world");
   return (
     <div className="memory">
       <GuessCount guesses={0} />

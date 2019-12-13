@@ -4,6 +4,10 @@ import "./Card.css";
 
 const HIDDEN_SYMBOL = "❓";
 
-const Card = () => <div className="card" />;
+const Card = () => {
+  const a = "Hello world";
+
+  return <div className="card">H</div>;
+};
 
 export default Card;
