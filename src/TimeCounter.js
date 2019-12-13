@@ -18,7 +18,7 @@ export default class TimeCounter extends Component {
     // }, 1000);
     this.setState(prevState => ({
       executedTimer: setInterval(() => {
-        console.log("interval executed");
+        //console.log("interval executed");
         const seconds = this.state.currentSecond + 1;
         this.setState({ currentSecond: seconds });
       }, 1000)
