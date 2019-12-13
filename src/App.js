@@ -4,6 +4,7 @@ import Card from "./Card";
 import Greeter from "./Greeter";
 import GuessCount from "./GuessCount";
 import Columns from "./Columns";
+import Section from "./Section";
 
 class App extends Component {
   handleClick(Card) {
@@ -13,11 +14,16 @@ class App extends Component {
   render() {
     const GreeterComponent = <Greeter whom="Rached" />;
     const ColumnLeft = <div>Left Column</div>;
-    const ColumnCenter = <div>Center Column</div>;
-    const ColumnRight = <div>Right Column</div>;
+
     return (
       <div>
-        <Columns left={ColumnLeft} center="center" right="right"></Columns>
+        <Columns
+          left={ColumnLeft}
+          center="center"
+          right={
+            <Section text="Right column customized with component"></Section>
+          }
+        ></Columns>
         {GreeterComponent}
         {GreeterComponent}
         <GuessCount guesses={0} />
