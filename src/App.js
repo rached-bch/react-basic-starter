@@ -10,7 +10,7 @@ import Users from "./Users";
 class App extends Component {
   users = ["Rached", "Mike", "Rob"];
 
-  handleClick(Card) {
+  handleClick() {
     console.log("Card click");
   }
 
@@ -50,11 +50,23 @@ class App extends Component {
         {GreeterComponent}
         <GuessCount guesses={0} />
         <Card card="😀" feedback="hidden" onClick={() => this.handleClick} />
-        <Card card="🎉" feedback="justMatched" onClick={this.handleClick} />
-        <Card card="💖" feedback="justMismatched" onClick={this.handleClick} />
-        <Card card="🎩" feedback="visible" onClick={this.handleClick} />
-        <Card card="🐶" feedback="hidden" onClick={this.handleClick} />
-        <Card card="🐱" feedback="justMatched" onClick={this.handleClick} />
+        <Card
+          card="🎉"
+          feedback="justMatched"
+          onClick={() => this.handleClick}
+        />
+        <Card
+          card="💖"
+          feedback="justMismatched"
+          onClick={() => this.handleClick}
+        />
+        <Card card="🎩" feedback="visible" onClick={() => this.handleClick} />
+        <Card card="🐶" feedback="hidden" onClick={() => this.handleClick} />
+        <Card
+          card="🐱"
+          feedback="justMatched"
+          onClick={() => this.handleClick}
+        />
         <Users users={this.users}></Users>
       </div>
     );
