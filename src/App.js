@@ -14,16 +14,35 @@ class App extends Component {
   render() {
     const GreeterComponent = <Greeter whom="Rached" />;
     const ColumnLeft = <div>Left Column</div>;
-
+    let won = new Date().getSeconds() % 2 === 0;
     return (
       <div>
-        <Columns
-          left={ColumnLeft}
-          center="center"
-          right={
-            <Section text="Right column customized with component"></Section>
-          }
-        ></Columns>
+        {won && (
+          <Columns
+            left={ColumnLeft}
+            center="center colonne affichée en seconde module 2"
+            right={
+              <Section text="Right column customized with component"></Section>
+            }
+          ></Columns>
+        )}
+        {won ? (
+          <Columns
+            left={ColumnLeft}
+            center="Colonne tjs affichée en cas module 2"
+            right={
+              <Section text="Right column customized with component"></Section>
+            }
+          ></Columns>
+        ) : (
+          <Columns
+            left={ColumnLeft}
+            center="Colonne tjs affichée PAS en cas module 2"
+            right={
+              <Section text="Right column customized with component"></Section>
+            }
+          ></Columns>
+        )}
         {GreeterComponent}
         {GreeterComponent}
         <GuessCount guesses={0} />
