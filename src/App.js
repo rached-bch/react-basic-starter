@@ -1,20 +1,28 @@
-import React from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Card from "./Card";
+import Greeter from "./Greeter";
 import GuessCount from "./GuessCount";
 
-function App() {
-  console.log("Hello world");
-  return (
-    <div className="memory">
-      <GuessCount guesses={0} />
-      <Card card="😀" feedback="hidden" />
-      <Card card="🎉" feedback="justMatched" />
-      <Card card="💖" feedback="justMismatched" />
-      <Card card="🎩" feedback="visible" />
-      <Card card="🐶" feedback="hidden" />
-      <Card card="🐱" feedback="justMatched" />
-    </div>
-  );
+class App extends Component {
+  handleClick(Card) {
+    console.log("Card click", Card);
+  }
+
+  render() {
+    return (
+      <div className="memory">
+        <Greeter whom="Rached" />
+        <GuessCount guesses={0} />
+        <Card card="😀" feedback="hidden" onClick={() => this.handleClick} />
+        <Card card="🎉" feedback="justMatched" onClick={this.handleClick} />
+        <Card card="💖" feedback="justMismatched" onClick={this.handleClick} />
+        <Card card="🎩" feedback="visible" onClick={this.handleClick} />
+        <Card card="🐶" feedback="hidden" onClick={this.handleClick} />
+        <Card card="🐱" feedback="justMatched" onClick={this.handleClick} />
+      </div>
+    );
+  }
 }
+
 export default App;
