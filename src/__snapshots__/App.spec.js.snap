@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App/> should match its reference snapshot 1`] = `
+<div>
+  <TimeCounter />
+  <Form />
+  <Columns
+    center="center colonne affichée en seconde module 2"
+    left={
+      <div>
+        Left Column
+      </div>
+    }
+    right={
+      <Section
+        text="Right column customized with component"
+      />
+    }
+  />
+  <Columns
+    center="Colonne tjs affichée en cas module 2"
+    left={
+      <div>
+        Left Column
+      </div>
+    }
+    right={
+      <Section
+        text="Right column customized with component"
+      />
+    }
+  />
+  <Greeter
+    whom="Rached"
+  />
+  <Greeter
+    whom="Rached"
+  />
+  <GuessCount
+    guesses={0}
+  />
+  <Card
+    car="🐱"
+    card="😀"
+    feedback="hidden"
+    onClick={[Function]}
+  />
+  <Card
+    car="🐱"
+    card="🎉"
+    feedback="justMatched"
+    onClick={[Function]}
+  />
+  <Card
+    car="🐱"
+    card="💖"
+    feedback="justMismatched"
+    onClick={[Function]}
+  />
+  <Card
+    car="🐱"
+    card="🎩"
+    feedback="visible"
+    onClick={[Function]}
+  />
+  <Card
+    car="🐱"
+    card="🐶"
+    feedback="hidden"
+    onClick={[Function]}
+  />
+  <Card
+    car="🐱"
+    feedback="visible"
+  />
+  <Users
+    users={
+      Array [
+        "Rached",
+        "Mike",
+        "Rob",
+      ]
+    }
+  />
+</div>
+`;
