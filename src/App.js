@@ -62,11 +62,7 @@ class App extends Component {
         />
         <Card card="🎩" feedback="visible" onClick={() => this.handleClick} />
         <Card card="🐶" feedback="hidden" onClick={() => this.handleClick} />
-        <Card
-          card="🐱"
-          feedback="justMatched"
-          onClick={() => this.handleClick}
-        />
+        <Card />
         <Users users={this.users}></Users>
       </div>
     );
