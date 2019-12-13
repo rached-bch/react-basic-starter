@@ -10,9 +10,12 @@ class App extends Component {
   }
 
   render() {
+    const GreeterComponent = <Greeter whom="Rached" />;
+
     return (
       <div className="memory">
-        <Greeter whom="Rached" />
+        {GreeterComponent}
+        {GreeterComponent}
         <GuessCount guesses={0} />
         <Card card="😀" feedback="hidden" onClick={() => this.handleClick} />
         <Card card="🎉" feedback="justMatched" onClick={this.handleClick} />
